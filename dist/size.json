@@ -1,0 +1,22 @@
+{
+  "base": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/",
+  "css": {
+    "bytes": 105380,
+    "gzip": 20856,
+    "sha384": "sha384-vI7eV/F65y6jwmIa+J6/vNUdYDJNUER3/cgA12GoMIs+uAEb9leNw4y6IebTTrEs"
+  },
+  "js": {
+    "bytes": 11993,
+    "gzip": 4067,
+    "sha384": "sha384-Jdx/JFS+KOwbXXcePytvWn9JOUK5ZEPNnz/jq6O1btZ7ETYmCdM6BP/FLeLB+eOL"
+  },
+  "index": {
+    "bytes": 147619,
+    "gzip": 31373
+  },
+  "indexCdn": {
+    "bytes": 30648
+  },
+  "assets": 25,
+  "modal": "PENDENTE (não implementado por decisão do cliente)"
+}

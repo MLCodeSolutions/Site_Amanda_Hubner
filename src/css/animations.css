@@ -1,0 +1,508 @@
+/* ==========================================================================
+   animations.css — movimento e efeitos de rolagem
+   Camada puramente visual: não altera textos, cores, fontes ou layout.
+   ========================================================================== */
+
+:root {
+  --motion-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --motion-reveal: 820ms;
+}
+
+/* ---------- Header: estado ao rolar ---------- */
+
+.site-header {
+  transition: transform 0.45s var(--motion-ease-soft),
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.site-header.is-scrolled {
+  background: rgba(243, 238, 223, 0.95);
+  box-shadow: 0 16px 40px -32px rgba(43, 51, 41, 0.6);
+}
+
+.site-header.is-hidden {
+  transform: translateY(-105%);
+}
+
+.site-header:focus-within {
+  transform: none;
+}
+
+/* ---------- Progresso de leitura ---------- */
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  z-index: 60;
+  pointer-events: none;
+}
+
+.scroll-progress > span {
+  display: block;
+  height: 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(var(--scroll-progress, 0));
+  background: linear-gradient(90deg, var(--sage), var(--olive));
+}
+
+/* ---------- Menu: underline e seção ativa ---------- */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 5px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--olive);
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s var(--motion-ease-soft);
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.is-active,
+.nav-mobile a.is-active {
+  color: var(--wine);
+}
+
+/* ---------- Hero: entrada de página ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  html.is-complete .hero-panel {
+    animation: heroPanelIn 0.9s var(--motion-ease) 0.05s backwards;
+  }
+
+  html.is-complete .hero-eyebrow {
+    animation: heroItemIn 0.8s var(--motion-ease) 0.16s backwards;
+  }
+
+  html.is-complete .hero-copy {
+    animation: heroItemIn 0.9s var(--motion-ease) 0.24s backwards;
+  }
+
+  html.is-complete .hero-actions {
+    animation: heroItemIn 0.8s var(--motion-ease) 0.38s backwards;
+  }
+
+  html.is-complete .hero-photo {
+    animation: heroPhotoIn 1s var(--motion-ease) 0.12s backwards;
+  }
+
+  html.is-complete .photo-badge {
+    animation: heroBadgeIn 0.8s var(--motion-ease) 0.62s backwards;
+  }
+
+  html.is-complete .stat-card--time {
+    animation: heroCardIn 0.85s var(--motion-ease) 0.45s backwards;
+  }
+
+  html.is-complete .stat-card--pets {
+    animation: heroCardIn 0.85s var(--motion-ease) 0.57s backwards;
+  }
+
+  html.is-complete .hero-glow {
+    animation: glowDrift 18s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes heroPanelIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0) scale(0.985);
+  }
+}
+
+@keyframes heroItemIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+}
+
+@keyframes heroPhotoIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0) scale(1.04);
+  }
+}
+
+@keyframes heroBadgeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0) scale(0.94);
+  }
+}
+
+@keyframes heroCardIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 28px, 0);
+  }
+}
+
+@keyframes glowDrift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-18px, 16px, 0) scale(1.08);
+  }
+}
+
+/* ---------- Reveal de seções ---------- */
+
+.reveal.is-inview {
+  animation-name: revealUp;
+  animation-duration: var(--motion-reveal);
+  animation-timing-function: var(--motion-ease);
+  animation-delay: var(--reveal-delay, 0ms);
+  animation-fill-mode: backwards;
+  animation-iteration-count: 1;
+}
+
+.reveal--left.is-inview {
+  animation-name: revealLeft;
+}
+
+.reveal--right.is-inview {
+  animation-name: revealRight;
+}
+
+.reveal--scale.is-inview {
+  animation-name: revealScale;
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 44px, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-56px, 0, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    transform: translate3d(56px, 0, 0) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes revealScale {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Estrelas dos depoimentos ---------- */
+
+.testimonial.is-inview .testimonial__stars i {
+  animation: starPop 0.5s var(--motion-ease) backwards;
+}
+
+.testimonial.is-inview .testimonial__stars i:nth-child(1) {
+  animation-delay: calc(var(--reveal-delay, 0ms) + 360ms);
+}
+
+.testimonial.is-inview .testimonial__stars i:nth-child(2) {
+  animation-delay: calc(var(--reveal-delay, 0ms) + 420ms);
+}
+
+.testimonial.is-inview .testimonial__stars i:nth-child(3) {
+  animation-delay: calc(var(--reveal-delay, 0ms) + 480ms);
+}
+
+.testimonial.is-inview .testimonial__stars i:nth-child(4) {
+  animation-delay: calc(var(--reveal-delay, 0ms) + 540ms);
+}
+
+.testimonial.is-inview .testimonial__stars i:nth-child(5) {
+  animation-delay: calc(var(--reveal-delay, 0ms) + 600ms);
+}
+
+@keyframes starPop {
+  from {
+    opacity: 0;
+    transform: scale(0.4) rotate(-14deg);
+  }
+}
+
+/* ---------- FAQ e menu mobile ---------- */
+
+.faq-item summary i {
+  transition: transform 0.3s var(--motion-ease-soft);
+}
+
+.faq-item[open] summary i {
+  animation: iconPop 0.35s var(--motion-ease) backwards;
+}
+
+.faq-item[open] .faq-item__answer {
+  animation: faqAnswerIn 0.4s var(--motion-ease) backwards;
+}
+
+@keyframes iconPop {
+  from {
+    opacity: 0;
+    transform: scale(0.5) rotate(-90deg);
+  }
+}
+
+@keyframes faqAnswerIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@media (max-width: 1180px) {
+  .nav-mobile[data-open] {
+    animation: menuPanelIn 0.3s var(--motion-ease) backwards;
+    transform-origin: top center;
+  }
+
+  .nav-mobile[data-open] a {
+    animation: menuItemIn 0.38s var(--motion-ease) backwards;
+  }
+
+  .nav-mobile[data-open] a:nth-child(1) { animation-delay: 20ms; }
+  .nav-mobile[data-open] a:nth-child(2) { animation-delay: 60ms; }
+  .nav-mobile[data-open] a:nth-child(3) { animation-delay: 100ms; }
+  .nav-mobile[data-open] a:nth-child(4) { animation-delay: 140ms; }
+  .nav-mobile[data-open] a:nth-child(5) { animation-delay: 180ms; }
+  .nav-mobile[data-open] a:nth-child(6) { animation-delay: 220ms; }
+  .nav-mobile[data-open] a:nth-child(7) { animation-delay: 260ms; }
+  .nav-mobile[data-open] a:nth-child(8) { animation-delay: 300ms; }
+}
+
+@keyframes menuPanelIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -10px, 0);
+  }
+}
+
+@keyframes menuItemIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -12px, 0);
+  }
+}
+
+/* ---------- Botões, cards e ícones ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn,
+  .mobile-bar__cta {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  .btn::after,
+  .mobile-bar__cta::after {
+    content: "";
+    position: absolute;
+    top: -70%;
+    bottom: -70%;
+    left: -90%;
+    width: 55%;
+    background: linear-gradient(105deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: skewX(-18deg);
+    transition: left 0.65s var(--motion-ease);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .btn:hover::after,
+  .mobile-bar__cta:hover::after {
+    left: 130%;
+  }
+
+  .btn:active,
+  .mobile-bar__cta:active {
+    transform: translateY(0) scale(0.985);
+  }
+
+  .brand__logo {
+    transition: transform 0.35s var(--motion-ease-soft);
+  }
+
+  .brand:hover .brand__logo {
+    transform: scale(1.04);
+  }
+
+  .marquee__img--gallery,
+  .marquee__img--pets {
+    transition: transform 0.45s var(--motion-ease-soft), box-shadow 0.45s var(--motion-ease-soft);
+  }
+
+  .marquee__img--gallery:hover,
+  .marquee__img--pets:hover {
+    transform: scale(1.04);
+    box-shadow: 0 20px 38px -28px rgba(43, 51, 41, 0.55);
+  }
+  .service-card__icon,
+  .mini-card i,
+  .contact-card__icon {
+    transition: transform 0.35s var(--motion-ease-soft);
+  }
+
+  .service-card:hover .service-card__icon {
+    transform: rotate(-6deg) scale(1.06);
+  }
+
+  .mini-card:hover i {
+    transform: translateY(-2px) scale(1.08);
+  }
+
+  .contact-card:hover .contact-card__icon {
+    transform: rotate(8deg) scale(1.05);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .service-card,
+  .stat-card,
+  .mini-card,
+  .contact-card,
+  .testimonial {
+    transition: transform 0.35s var(--motion-ease-soft),
+      box-shadow 0.35s var(--motion-ease-soft),
+      border-color 0.35s ease;
+  }
+
+  .service-card:hover,
+  .stat-card:hover,
+  .mini-card:hover,
+  .contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 28px 54px -36px rgba(43, 51, 41, 0.55);
+  }
+
+  .testimonial:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 48px -36px rgba(43, 51, 41, 0.45);
+  }
+
+  .tilt-ready {
+    transform-style: preserve-3d;
+  }
+
+  .tilt-ready.is-tilting {
+    transition-duration: 0.12s, 0.35s, 0.35s;
+    transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg))
+      translateY(-5px);
+  }
+}
+
+/* ---------- Parallax (somente desktop) ---------- */
+
+@media (min-width: 1024px) and (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero-photo img,
+  .benefits-photo img,
+  .about-photo img {
+    will-change: transform;
+  }
+}
+
+/* ---------- Movimento reduzido ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header {
+    transition: none;
+  }
+
+  .site-header.is-hidden {
+    transform: none;
+  }
+
+  .nav-link::after,
+  .brand__logo,
+  .faq-item summary i,
+  .marquee__img--gallery,
+  .marquee__img--pets,
+  .service-card__icon,
+  .mini-card i,
+  .contact-card__icon {
+    transition: none;
+  }
+
+  .reveal.is-inview,
+  .hero-panel,
+  .hero-eyebrow,
+  .hero-copy,
+  .hero-actions,
+  .hero-photo,
+  .photo-badge,
+  .stat-card--time,
+  .stat-card--pets,
+  .hero-glow,
+  .testimonial.is-inview .testimonial__stars i,
+  .faq-item[open] summary i,
+  .faq-item[open] .faq-item__answer,
+  .nav-mobile[data-open],
+  .nav-mobile[data-open] a {
+    animation: none !important;
+  }
+
+  .btn::after,
+  .mobile-bar__cta::after {
+    display: none;
+  }
+
+  .tilt-ready,
+  .tilt-ready.is-tilting {
+    transform: none !important;
+  }
+}
+
+.marquee-mask:focus .marquee,
+.cta-mask:focus .marquee {
+  animation-play-state: paused;
+}
+
+@media print {
+  .scroll-progress {
+    display: none !important;
+  }
+
+  .site-header {
+    transform: none !important;
+  }
+}

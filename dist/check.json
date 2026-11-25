@@ -1,0 +1,129 @@
+{
+  "file": "dist/index.html",
+  "bytes": 147619,
+  "gzip": 31373,
+  "sizeRisk": "baixo",
+  "modal": "PENDENTE (não implementado por decisão do cliente)",
+  "checks": [
+    {
+      "name": "index.html existe",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem <title>",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem meta description",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem Open Graph",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem Twitter card",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem canonical",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem CSS externo no self-contained",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem JS externo no self-contained",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem @main",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem raw.githubusercontent.com",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem http://",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem base64 grande",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "loader fallback 3s",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem barra mobile antiga",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "WhatsApp flutuante",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "voltar ao topo",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem token no index",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "index self-contained abaixo de 300 KB",
+      "ok": true,
+      "detail": "147619 bytes"
+    },
+    {
+      "name": "CSS/JS gerados",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "integridade gerada",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem caminho ../assets",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem src relativo de asset",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "assets na tag",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "sem URLs de CSS/JS relativas",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

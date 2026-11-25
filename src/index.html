@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Dra. Amanda Hübner &#8212; Veterinária domiciliar</title>
+  <!-- MODELO 2: layout do site Real, adaptado para a Dra. Amanda Hübner -->
+  <meta name="description" content="Dra. Amanda Hübner: atendimento veterinário domiciliar para cães e gatos na Zona Leste de São Paulo. Consultas, vacinas e exames com hora marcada, no conforto do seu lar.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Dra. Amanda Hübner">
+  <meta property="og:title" content="Dra. Amanda Hübner — Veterinária domiciliar">
+  <meta property="og:description" content="Atendimento domiciliar para cães e gatos na Zona Leste de São Paulo — consultas, vacinas e exames com hora marcada.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Dra. Amanda Hübner — Veterinária domiciliar">
+  <meta name="twitter:description" content="Atendimento veterinário domiciliar na Zona Leste de São Paulo, com hora marcada e cuidado individual.">
+  <meta name="theme-color" content="#40493D">
+  <!-- TODO: quando o domínio real existir, restaurar canonical, og:url e og:image
+       (assets/img/og-abh.png) com URLs absolutas. -->
+
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-touch-icon.png">
+
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/bricolage-grotesque-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/hanken-grotesk-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="../assets/fonts/instrument-serif-italic-latin.woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/main.css">
+  <style data-abh-boot>
+    #abh-boot {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      overscroll-behavior: contain;
+      background:
+        radial-gradient(620px 420px at 50% 38%, rgba(147, 149, 129, 0.22), transparent 70%),
+        radial-gradient(380px 280px at 50% 62%, rgba(187, 181, 157, 0.3), transparent 70%),
+        #f3eedf;
+      color: #2b3329;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+      transition: opacity 0.35s ease, visibility 0s 0.35s;
+      animation: abh-boot-fallback 0.3s ease 3s forwards;
+    }
+    #abh-boot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(64, 73, 61, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(64, 73, 61, 0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      -webkit-mask-image: radial-gradient(70% 60% at 50% 50%, #000 30%, transparent 80%);
+      mask-image: radial-gradient(70% 60% at 50% 50%, #000 30%, transparent 80%);
+      pointer-events: none;
+    }
+    #abh-boot .abh-boot__inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      transform: translateY(-2px);
+    }
+    #abh-boot .abh-boot__mark {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: linear-gradient(150deg, rgba(247, 244, 236, 0.95), rgba(221, 223, 204, 0.85));
+      border: 1px solid rgba(64, 73, 61, 0.18);
+      box-shadow: 0 0 50px rgba(147, 149, 129, 0.24), inset 0 0 30px rgba(243, 238, 223, 0.35);
+    }
+    #abh-boot .abh-boot__logo {
+      display: block;
+      width: 96px;
+      height: auto;
+      filter: drop-shadow(0 2px 5px rgba(43, 51, 41, 0.18));
+    }
+    #abh-boot .abh-boot__ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 2px solid rgba(64, 73, 61, 0.14);
+      border-top-color: #939581;
+      border-right-color: #40493d;
+      animation: abh-boot-spin 1.1s linear infinite;
+    }
+    #abh-boot .abh-boot__ring::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      border-radius: 50%;
+      background: #bbb59d;
+      box-shadow: 0 0 12px #bbb59d;
+    }
+    #abh-boot .abh-boot__text {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #2b3329;
+    }
+    #abh-boot .abh-boot__dots {
+      display: inline-block;
+      width: 1.4em;
+      text-align: left;
+      animation: abh-boot-dots 1.4s steps(4, end) infinite;
+    }
+    #abh-boot .abh-boot__brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: #5a5f52;
+    }
+    @keyframes abh-boot-spin {
+      to { transform: rotate(360deg); }
+    }
+    @keyframes abh-boot-dots {
+      0% { clip-path: inset(0 100% 0 0); }
+      25% { clip-path: inset(0 75% 0 0); }
+      50% { clip-path: inset(0 50% 0 0); }
+      75% { clip-path: inset(0 25% 0 0); }
+      100% { clip-path: inset(0 0 0 0); }
+    }
+    @keyframes abh-boot-fallback {
+      to { opacity: 0; visibility: hidden; pointer-events: none; }
+    }
+    html.is-ready #abh-boot {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      animation: none !important;
+    }
+    html.is-ready #abh-boot * { animation: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      #abh-boot { transition: none; }
+      #abh-boot .abh-boot__ring,
+      #abh-boot .abh-boot__dots { animation: none !important; }
+      #abh-boot .abh-boot__dots { clip-path: none; }
+    }
+  </style>
+  <noscript><style>
+    #abh-boot { display: none !important; }
+    .type-ghost { visibility: visible !important; }
+    [data-sc-type] { display: none !important; }
+    .faq-item summary i { display: none !important; }
+    @media (max-width: 1180px) {
+      .burger { display: none !important; }
+      .nav-mobile {
+        display: flex !important;
+        position: static;
+        max-height: none;
+        overflow: visible;
+        box-shadow: none;
+      }
+    }
+  </style></noscript>
+</head>
+
+<body>
+  <div id="abh-boot" role="status" aria-live="polite" aria-label="Carregando o site">
+    <div class="abh-boot__inner">
+      <div class="abh-boot__mark" aria-hidden="true">
+        <img class="abh-boot__logo" src="../assets/img/logo-abh.svg" alt="" width="168" height="77">
+        <i class="abh-boot__ring"></i>
+      </div>
+      <p class="abh-boot__text">Carregando<span class="abh-boot__dots" aria-hidden="true">...</span></p>
+      <small class="abh-boot__brand">Dra. Amanda Hübner</small>
+    </div>
+  </div>
+
+  <a class="skip-link" href="#home">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER FIXO ============ -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home" data-menu-close aria-label="Dra. Amanda Hübner — início">
+        <img class="brand__logo" src="../assets/img/logo-abh.svg" alt="" width="443" height="217">
+        <span class="brand__word">
+          <span class="brand__name">Dra. Amanda Hübner</span>
+          <span class="brand__tag">Atendimento domiciliar</span>
+        </span>
+      </a>
+
+      <!-- MODELO 2: itens do menu -->
+      <nav class="nav-desktop" data-desktop aria-label="Navegação principal">
+        <a class="nav-link" href="#beneficios">Benefícios</a>
+        <a class="nav-link" href="#servicos">Serviços</a>
+        <a class="nav-link" href="#sobre">Dra. Amanda</a>
+        <a class="nav-link" href="#faq">Dúvidas</a>
+        <a class="nav-link" href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--wine btn--header" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" data-wa aria-label="Agendar pelo WhatsApp">
+          <i class="icon-message-circle" aria-hidden="true"></i> <span data-agendar-txt>Agendar</span>
+        </a>
+        <button class="burger" data-burger type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+          <i class="icon-menu" data-sc-burger aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="menu-mobile" data-sc-menu aria-label="Menu mobile">
+      <a href="#beneficios" data-menu-close>Benefícios</a>
+      <a href="#servicos" data-menu-close>Serviços</a>
+      <a href="#sobre" data-menu-close>Dra. Amanda</a>
+      <a href="#faq" data-menu-close>Dúvidas</a>
+      <a href="#contato" data-menu-close>Contato</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ============ 1. HERO — BENTO ============ -->
+    <section class="section section--hero" id="home">
+      <div class="bento bento--hero" data-bento>
+
+        <div class="hero-panel" data-hero>
+          <div class="hero-glow" aria-hidden="true"></div>
+
+          <div class="hero-eyebrow">
+            <i class="icon-house" aria-hidden="true"></i> Veterinária domiciliar
+          </div>
+
+          <div class="hero-copy">
+            <h1 class="title title--hero" aria-label="Seu pet cuidado em casa, sem estresse e sem sala de espera.">Seu pet cuidado em casa,
+              <span class="type-wrap"><span class="type-ghost">sem estresse</span><span data-sc-type="sem estresse"></span></span>
+              e sem sala de espera.</h1>
+            <p class="hero-lede">Consultas, vacinas e exames no conforto do seu lar — para cães e gatos.</p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn--peach btn--hero" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" data-wa>
+              <span class="btn__badge"><i class="icon-message-circle" aria-hidden="true"></i></span>
+              Agendar pelo WhatsApp
+            </a>
+            <span class="hero-loc" data-hero-loc><i class="icon-map-pin" aria-hidden="true"></i> São Paulo, Zona Leste</span>
+          </div>
+        </div>
+
+        <!-- Retrato da Dra. Amanda -->
+        <div class="hero-photo">
+          <img decoding="async" fetchpriority="high" src="../assets/img/amanda-retrato-1200.webp" srcset="../assets/img/amanda-retrato-600.webp 600w, ../assets/img/amanda-retrato-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 45vw" width="600" height="793" alt="Dra. Amanda Hübner, médica-veterinária, de jaleco e estetoscópio">
+          <div class="photo-badge">
+            <div class="photo-badge__card">
+              <span class="photo-badge__name">Dra. Amanda Hübner</span>
+              <span class="photo-badge__role">Médica-veterinária · <span data-config="crmv">CRMV 00000-SP</span></span>
+            </div>
+            <span class="pill-status"><i class="icon-badge-check" aria-hidden="true"></i> Registro ativo</span>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--time">
+          <i class="stat-card__icon icon-clock" aria-hidden="true"></i>
+          <div>
+            <div class="stat-card__value"><span data-sc-count="60,90,">60–90</span><small> min</small></div>
+            <div class="stat-card__label">de consulta, sem pressa</div>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--pets">
+          <div class="stat-card__pets-icons" aria-hidden="true">
+            <i class="icon-dog"></i><i class="icon-cat"></i>
+          </div>
+          <div class="stat-card__text"><strong>Cães e gatos</strong> — cada um com o cuidado que a sua rotina pede.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PROVA SOCIAL ============ -->
+    <section class="section section--social" id="depoimentos">
+      <div class="bento bento--testimonials" data-bento>
+
+        <div class="quote-feature">
+          <span class="quote-feature__eyebrow">Quem já abriu a porta</span>
+          <p class="quote-feature__text">"A primeira veterinária que encontro que realmente escuta o tutor."</p>
+          <span class="quote-feature__author">— Camila Duarte</span>
+        </div>
+
+        <figure class="testimonial">
+          <div class="testimonial__stars" aria-label="5 de 5 estrelas"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></div>
+          <blockquote class="testimonial__quote">Profissional, atenciosa e super pontual. Atendeu todas as necessidades do nosso gato com muito zelo. Valores justos. Super recomendo!</blockquote>
+          <figcaption class="testimonial__author">Thiago Freitas <span class="testimonial__pet">· gato</span></figcaption>
+        </figure>
+
+        <figure class="testimonial">
+          <div class="testimonial__stars" aria-label="5 de 5 estrelas"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></div>
+          <blockquote class="testimonial__quote">Cuidou delicadamente do nosso caso, com muita sensibilidade com a nossa gata idosa. Confiável e solícita.</blockquote>
+          <figcaption class="testimonial__author">Larissa Nogueira <span class="testimonial__pet">· gata</span></figcaption>
+        </figure>
+
+        <figure class="testimonial">
+          <div class="testimonial__stars" aria-label="5 de 5 estrelas"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></div>
+          <blockquote class="testimonial__quote">Já tarde da noite ela estava lutando para salvar a Margarida, nossa cadela. Delicada e atenciosa o tempo todo. Gratidão!</blockquote>
+          <figcaption class="testimonial__author">Eduardo Pires <span class="testimonial__pet">· cadela</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ GALERIA — ilustrações ============ -->
+    <section class="section" id="galeria">
+      <div class="section-head">
+        <div class="section-head__text">
+          <span class="eyebrow">No dia a dia</span>
+          <h2 class="title title--lg">Atendimentos <span class="accent">de verdade.</span></h2>
+        </div>
+        <p class="section-head__note">Um pouco da rotina, em movimento.</p>
+      </div>
+
+      <div class="marquee-mask marquee-mask--section" tabindex="0" role="group" aria-label="Galeria de ilustrações em movimento; a animação pausa com o foco.">
+        <div class="marquee" data-sc-marquee>
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="Ilustração de casa" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="Ilustração de consulta veterinária" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="Ilustração de vacinação" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="Ilustração de exame laboratorial" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="../assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. BENEFÍCIOS — BENTO ============ -->
+    <section class="section" id="beneficios">
+      <div class="section-head section-head--40">
+        <div class="section-head__text section-head__text--wide">
+          <span class="eyebrow">Por que em casa</span>
+          <h2 class="title title--lg">Nem todo animal se sente bem numa clínica. <span class="accent">Em casa, ele é ele mesmo.</span></h2>
+        </div>
+        <p class="section-head__note section-head__note--wide benefits-note">Sem trânsito, sem espera e sem contato com outros animais — e uma avaliação mais natural do comportamento do seu pet.</p>
+      </div>
+
+      <div class="benefits-grid" data-bento>
+        <div class="benefits-photo">
+          <img decoding="async" src="../assets/img/art/beneficios-casa.svg" alt="Ilustração de casa com estetoscópio e gato" loading="lazy" width="1024" height="1280">
+        </div>
+
+        <div class="features" data-grid4>
+          <div class="feature">
+            <span class="icon-tile"><i class="icon-heart-pulse" aria-hidden="true"></i></span>
+            <h3 class="feature__title">Menos estresse</h3>
+            <p class="feature__text">Em ambiente conhecido o pet fica mais seguro — e estresse baixo protege a imunidade.</p>
+          </div>
+
+          <div class="feature">
+            <span class="icon-tile"><i class="icon-sofa" aria-hidden="true"></i></span>
+            <h3 class="feature__title">Mais comodidade</h3>
+            <p class="feature__text feature__text--wine">Horário agendado, no seu sofá.</p>
+          </div>
+
+          <div class="feature">
+            <span class="icon-tile"><i class="icon-fingerprint" aria-hidden="true"></i></span>
+            <h3 class="feature__title">Individualizado</h3>
+            <p class="feature__text">Rotina, histórico e espécie guiam cada consulta.</p>
+          </div>
+
+          <div class="feature feature--cta">
+            <span class="icon-tile"><i class="icon-shield-check" aria-hidden="true"></i></span>
+            <div class="feature__body">
+              <h3 class="feature__title">Prevenção e acompanhamento</h3>
+              <p class="feature__text">Os primeiros sinais são pequenos. Cuidar antes é o melhor remédio.</p>
+            </div>
+            <a class="link-cta" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" data-wa>Agendar check-up <i class="icon-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. SERVIÇOS ============ -->
+    <section class="section" id="servicos">
+      <div class="section-head--simple">
+        <span class="eyebrow">Serviços</span>
+        <h2 class="title title--lg">Do primeiro mês à <span class="accent">terceira idade.</span></h2>
+      </div>
+
+      <div class="grid4" data-grid4>
+        <article class="service-card">
+          <span class="service-card__icon"><i class="icon-baby" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Consulta pediátrica</h3>
+            <p class="service-card__text">Os primeiros meses definem a saúde futura: avaliação completa, alimentação, socialização e orientação para o tutor.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <span class="service-card__icon"><i class="icon-syringe" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Protocolo de vacinas e vermífugos</h3>
+            <p class="service-card__text">Definido pela idade, estilo de vida e riscos de exposição — aplicação em casa e carteira sempre em dia.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <span class="service-card__icon"><i class="icon-stethoscope" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Consulta preventiva</h3>
+            <p class="service-card__text">Check-up completo mesmo sem sinais de doença: detecção precoce e orientação de alimentação, ambiente e higiene.</p>
+          </div>
+        </article>
+
+        <article class="service-card">
+          <span class="service-card__icon"><i class="icon-heart-handshake" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Consulta geriátrica</h3>
+            <p class="service-card__text">Acompanhamento do pet idoso — dor, mobilidade e qualidade de vida — sem o estresse do deslocamento.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="service-panel">
+        <div class="service-list">
+          <div class="service-list__item"><i class="icon-flask-conical" aria-hidden="true"></i><span>Coleta para exames</span></div>
+          <div class="service-list__item"><i class="icon-scan-line" aria-hidden="true"></i><span>Microchipagem</span></div>
+          <div class="service-list__item"><i class="icon-plane" aria-hidden="true"></i><span>Protocolo de viagens</span></div>
+          <div class="service-list__item"><i class="icon-hospital" aria-hidden="true"></i><span>Acompanhamento cirúrgico</span></div>
+          <div class="service-list__item"><i class="icon-pill" aria-hidden="true"></i><span>Medicações e fluidoterapia</span></div>
+          <div class="service-list__item"><i class="icon-bandage" aria-hidden="true"></i><span>Curativos e feridas</span></div>
+        </div>
+        <div class="service-panel__footer">
+          <p>Não encontrou o que precisa? Pergunte — a gente direciona.</p>
+          <a class="btn btn--wine btn--services" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" data-wa>
+            <i class="icon-message-circle" aria-hidden="true"></i> Falar sobre meu pet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. SOBRE + REDE DE PARCEIROS ============ -->
+    <section class="section" id="sobre" aria-labelledby="sobre-title">
+      <div class="about-grid">
+        <div class="about-photo">
+          <img decoding="async" loading="lazy" src="../assets/img/amanda-retrato-1200.webp" srcset="../assets/img/amanda-retrato-600.webp 600w, ../assets/img/amanda-retrato-1200.webp 1200w" sizes="(max-width: 900px) 100vw, 45vw" width="600" height="793" alt="Retrato da Dra. Amanda Hübner no consultório">
+        </div>
+
+        <div class="about-copy">
+          <h2 class="eyebrow" id="sobre-title">Sobre a Dra. Amanda</h2>
+          <p class="about-quote">"O cuidado vai muito além do tratamento: começa com escuta, respeito e vínculo."</p>
+          <p class="about-text">Olá! Sou Amanda Hübner, médica-veterinária apaixonada por saúde preventiva e pelo bem-estar de cães e gatos. Atendo em domicílio para que cada consulta aconteça com calma, no ambiente em que o seu pet se sente seguro. Meu compromisso é explicar cada etapa, montar um plano de cuidado possível para a sua rotina e acompanhar de perto entre as visitas.</p>
+          <div class="about-sign">
+            <div class="about-sign__inner">
+              <span class="about-sign__name">Dra. Amanda Hübner</span>
+              <span class="about-sign__role">Médica-veterinária · <span data-config="crmv">CRMV-SP 77131</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-cards">
+          <div class="mini-card"><i class="icon-hospital" aria-hidden="true"></i><strong>Clínicas parceiras</strong><span>Cirurgias e casos que pedem estrutura hospitalar.</span></div>
+          <div class="mini-card"><i class="icon-flask-conical" aria-hidden="true"></i><strong>Laboratórios</strong><span>Exames para diagnóstico e acompanhamento.</span></div>
+          <div class="mini-card"><i class="icon-message-circle" aria-hidden="true"></i><strong>Suporte no WhatsApp</strong><span>Orientação e teleconsulta após a visita.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. FAQ ============ -->
+    <section class="section" id="faq">
+      <div class="bento bento--faq" data-bento>
+        <div class="faq-intro">
+          <span class="eyebrow">Dúvidas</span>
+          <h2 class="title title--md">Perguntas <span class="accent">frequentes</span></h2>
+          <p>Não achou sua resposta? Mande uma mensagem.</p>
+        </div>
+
+        <div class="faq-list" data-keep>
+          <details class="faq-item" data-sc-faq open>
+            <summary><span>Onde a Dra. Amanda atende?</span><i class="icon-minus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">São Paulo, Zona Leste e bairros próximos — atendimento domiciliar com hora marcada.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq>
+            <summary><span>Quanto tempo dura uma consulta domiciliar?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Depende das necessidades do paciente. Em média, de 60 minutos a 1h30.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq>
+            <summary><span>Quais serviços podem ser feitos em casa?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">• Vacinação e vermifugação
+• Protocolo para viagens nacionais e internacionais
+• Microchipagem
+• Consultas pediátricas e geriátricas
+• Coleta de materiais para exames
+• Medicações e fluidoterapia subcutânea
+• Corte de unhas
+• Curativos e limpeza de feridas
+• Acompanhamento pré e pós-cirúrgico</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq>
+            <summary><span>Quais pets são atendidos?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Cães e gatos — sempre considerando as necessidades de cada raça, idade e rotina.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq>
+            <summary><span>O atendimento domiciliar serve para emergências?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">É voltado a consultas, exames, vacinação e casos de pouca urgência. Mande sua mensagem: ajudamos a avaliar o caso e, se preciso, direcionamos para a clínica parceira mais próxima.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq>
+            <summary><span>Quais são as formas de pagamento?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Pagamento no momento do atendimento, via Pix, cartão ou dinheiro.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. CTA FINAL + CARROSSEL DE PETS ============ -->
+    <section class="section section--cta">
+      <div class="cta-panel">
+        <div class="cta-copy">
+          <div class="cta-copy__inner">
+            <h2 class="title title--2xl">Ele não consegue dizer quando algo <span class="accent">não está bem.</span></h2>
+            <p class="cta-copy__text">Por isso a prevenção é o melhor remédio. Agende a visita da Dra. Amanda.</p>
+          </div>
+          <a class="btn btn--deep btn--final" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" data-wa>
+            <span class="btn__badge btn__badge--lg"><i class="icon-message-circle" aria-hidden="true"></i></span>
+            Agendar pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="cta-strip" data-cta-strip>
+          <div class="cta-fade" data-cta-fade aria-hidden="true"></div>
+          <div class="cta-mask" data-cta-mask tabindex="0" role="group" aria-label="Ilustrações de pets em movimento; a animação pausa com o foco.">
+            <div class="marquee marquee--pets" data-sc-marquee>
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="Ilustração de consulta veterinária" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="Ilustração de exame laboratorial" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="Ilustração de vacinação" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="Ilustração de folhas" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="../assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- ============ CONTATO ============ -->
+  <section class="section--contact" id="contato" aria-label="Contato">
+    <div class="contact-grid">
+      <a class="contact-card contact-card--wine" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" data-wa>
+        <i class="contact-card__icon icon-message-circle" aria-hidden="true"></i>
+        <span class="contact-card__label">WhatsApp</span>
+        <strong class="contact-card__value" data-config="phoneDisplay">(11) 98229-5676</strong>
+      </a>
+
+      <a class="contact-card contact-card--soft" href="mailto:vetamanda@gmail.com" data-mail>
+        <i class="contact-card__icon icon-mail" aria-hidden="true"></i>
+        <span class="contact-card__label">E-mail</span>
+        <strong class="contact-card__value contact-card__value--email" data-config="email">vetamanda@gmail.com</strong>
+      </a>
+
+      <a class="contact-card contact-card--soft" href="https://www.instagram.com/mv.amandahubner" target="_blank" rel="noopener noreferrer" data-social="instagram">
+        <i class="contact-card__icon icon-instagram" aria-hidden="true"></i>
+        <span class="contact-card__label">Instagram</span>
+        <strong class="contact-card__value">@mv.amandahubner</strong>
+      </a>
+    </div>
+  </section>
+  </main>
+
+  <!-- ============ CONTROLES FLUTUANTES ============ -->
+  <div class="fab-stack" data-fab-stack>
+    <button class="to-top" type="button" aria-label="Voltar ao topo" data-to-top>
+      <i class="icon-arrow-up" aria-hidden="true"></i>
+    </button>
+    <a class="wa-fab" href="https://wa.me/5511982295676" target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp" data-wa>
+      <i class="icon-message-circle" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <!-- ============ RODAPÉ ============ -->
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <p class="site-footer__text">© 2026 Dra. Amanda Hübner. Todos os direitos reservados.</p>
+      <img class="site-footer__logo" src="../assets/img/logo-abh-light.svg" alt="Dra. Amanda Hübner" width="443" height="217">
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

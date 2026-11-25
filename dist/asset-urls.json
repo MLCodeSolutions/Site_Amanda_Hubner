@@ -1,0 +1,152 @@
+[
+  {
+    "local": "assets/fonts/bricolage-grotesque-latin-ext.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/bricolage-grotesque-latin-ext.woff2",
+    "type": "woff2",
+    "bytes": 30736
+  },
+  {
+    "local": "assets/fonts/bricolage-grotesque-latin.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/bricolage-grotesque-latin.woff2",
+    "type": "woff2",
+    "bytes": 76888
+  },
+  {
+    "local": "assets/fonts/hanken-grotesk-latin-ext.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/hanken-grotesk-latin-ext.woff2",
+    "type": "woff2",
+    "bytes": 19588
+  },
+  {
+    "local": "assets/fonts/hanken-grotesk-latin.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/hanken-grotesk-latin.woff2",
+    "type": "woff2",
+    "bytes": 34704
+  },
+  {
+    "local": "assets/fonts/instrument-serif-italic-latin-ext.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/instrument-serif-italic-latin-ext.woff2",
+    "type": "woff2",
+    "bytes": 12384
+  },
+  {
+    "local": "assets/fonts/instrument-serif-italic-latin.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/instrument-serif-italic-latin.woff2",
+    "type": "woff2",
+    "bytes": 22128
+  },
+  {
+    "local": "assets/fonts/instrument-serif-regular-latin-ext.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/instrument-serif-regular-latin-ext.woff2",
+    "type": "woff2",
+    "bytes": 11604
+  },
+  {
+    "local": "assets/fonts/instrument-serif-regular-latin.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/instrument-serif-regular-latin.woff2",
+    "type": "woff2",
+    "bytes": 21032
+  },
+  {
+    "local": "assets/fonts/lucide.woff",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/lucide.woff",
+    "type": "woff",
+    "bytes": 308576
+  },
+  {
+    "local": "assets/fonts/lucide.woff2",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/fonts/lucide.woff2",
+    "type": "woff2",
+    "bytes": 219184
+  },
+  {
+    "local": "assets/img/amanda-retrato-1200.webp",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/amanda-retrato-1200.webp",
+    "type": "webp",
+    "bytes": 55584
+  },
+  {
+    "local": "assets/img/amanda-retrato-600.webp",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/amanda-retrato-600.webp",
+    "type": "webp",
+    "bytes": 23448
+  },
+  {
+    "local": "assets/img/art/beneficios-casa.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/beneficios-casa.svg",
+    "type": "svg",
+    "bytes": 1934
+  },
+  {
+    "local": "assets/img/art/sil-01-casa.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-01-casa.svg",
+    "type": "svg",
+    "bytes": 1108
+  },
+  {
+    "local": "assets/img/art/sil-02-consulta.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-02-consulta.svg",
+    "type": "svg",
+    "bytes": 1130
+  },
+  {
+    "local": "assets/img/art/sil-03-vacina.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-03-vacina.svg",
+    "type": "svg",
+    "bytes": 1483
+  },
+  {
+    "local": "assets/img/art/sil-06-cao.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-06-cao.svg",
+    "type": "svg",
+    "bytes": 1407
+  },
+  {
+    "local": "assets/img/art/sil-07-gato.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-07-gato.svg",
+    "type": "svg",
+    "bytes": 1235
+  },
+  {
+    "local": "assets/img/art/sil-10-exame.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-10-exame.svg",
+    "type": "svg",
+    "bytes": 1276
+  },
+  {
+    "local": "assets/img/art/sil-11-jardim.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/art/sil-11-jardim.svg",
+    "type": "svg",
+    "bytes": 1257
+  },
+  {
+    "local": "assets/img/favicon/apple-touch-icon.png",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/favicon/apple-touch-icon.png",
+    "type": "png",
+    "bytes": 2671
+  },
+  {
+    "local": "assets/img/favicon/favicon.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/favicon/favicon.svg",
+    "type": "svg",
+    "bytes": 275
+  },
+  {
+    "local": "assets/img/logo-abh-light.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/logo-abh-light.svg",
+    "type": "svg",
+    "bytes": 21432
+  },
+  {
+    "local": "assets/img/logo-abh.svg",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/logo-abh.svg",
+    "type": "svg",
+    "bytes": 21432
+  },
+  {
+    "local": "assets/img/og-amanda-hubner.png",
+    "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0/assets/img/og-amanda-hubner.png",
+    "type": "png",
+    "bytes": 65699
+  }
+]

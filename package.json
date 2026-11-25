@@ -1,0 +1,27 @@
+﻿{
+  "name": "site-amanda-hubner-google-sites",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site da Dra. Amanda Hübner em modo app, em um único index.html para Google Sites, com assets no GitHub/jsDelivr.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MLCodeSolutions/Site_Amanda_Hubner.git"
+  },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "build:local": "node tools/build.mjs --base=../assets",
+    "build:release": "node tools/build.mjs --cdn=https://cdn.jsdelivr.net/gh/MLCodeSolutions/Site_Amanda_Hubner@v1.0.0",
+    "check": "node tools/check.mjs",
+    "assets": "node tools/assets.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "html-minifier-terser": "7.2.0",
+    "lightningcss": "1.33.0",
+    "playwright-core": "1.65.1"
+  }
+}
