@@ -32,8 +32,8 @@ URLs imutáveis na tag `v1.0.0`. Tamanhos em bytes/KB do arquivo local.
 
 ## Build
 
-- `dist/index.html`: 144.2 KB (gzip 30.6 KB)
-- `dist/main.min.css`: 102.9 KB (gzip 20.4 KB)
+- `dist/index.html`: 144.1 KB (gzip 30.6 KB)
+- `dist/main.min.css`: 102.8 KB (gzip 20.3 KB)
 - `dist/main.min.js`: 11.7 KB (gzip 4.0 KB)
 - `dist/index-cdn.html`: 29.9 KB
 - Modal: PENDENTE (não implementado por decisão do cliente)

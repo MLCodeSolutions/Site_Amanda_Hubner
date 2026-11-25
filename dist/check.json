@@ -1,7 +1,7 @@
 {
   "file": "dist/index.html",
-  "bytes": 147619,
-  "gzip": 31373,
+  "bytes": 147547,
+  "gzip": 31347,
   "sizeRisk": "baixo",
   "modal": "PENDENTE (não implementado por decisão do cliente)",
   "checks": [
@@ -93,7 +93,7 @@
     {
       "name": "index self-contained abaixo de 300 KB",
       "ok": true,
-      "detail": "147619 bytes"
+      "detail": "147547 bytes"
     },
     {
       "name": "CSS/JS gerados",
